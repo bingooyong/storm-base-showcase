@@ -1,3 +1,3 @@
 # storm-base-showcase
 
-A Storm Base Project user to build package
+A Storm Base Project use to build package
