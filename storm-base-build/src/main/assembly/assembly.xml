@@ -1,0 +1,36 @@
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>dir</format>
+    </formats>
+    <dependencySets>
+        <dependencySet>
+            <useProjectArtifact>true</useProjectArtifact>
+            <outputDirectory>lib</outputDirectory>
+        </dependencySet>
+    </dependencySets>
+    <baseDirectory>../</baseDirectory>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>src/main/scripts</directory>
+            <outputDirectory>/bin</outputDirectory>
+            <includes>
+                <include>start.sh</include>
+                <include>stop.sh</include>
+            </includes>
+            <excludes>
+                <exclude>WEB-INF/lib/*</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>../storm-base-topology/target/</directory>
+            <outputDirectory>/lib</outputDirectory>
+            <includes>
+                <include>
+                    storm-base-topology-1.0-SNAPSHOT-jar-with-dependencies.jar
+                </include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>
